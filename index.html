@@ -434,7 +434,7 @@ button{ font-family:inherit; }
 <body>
 
 <div class="config-banner" id="configBanner">
-  ⚠ Live booking is not connected yet — fill in <code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code> near the top of the script. See the setup guide.
+  ⚠ Live booking is not connected yet — paste your Google Apps Script URL into <code>BOOKING_API_URL</code> near the top of the script.
 </div>
 
 <!-- ===== Top nav ===== -->
@@ -528,7 +528,7 @@ button{ font-family:inherit; }
       <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
     </div>
     <div class="gallery-tile" data-category="exterior">
-      <img src="foto10.jpg" alt="Casa al Mare La Ciacca — photo 10">
+      <img src="foto10.jpg" alt="Valledoria coastline from above">
       <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
     </div>
     <div class="gallery-tile" data-category="bedroom2">
@@ -569,6 +569,34 @@ button{ font-family:inherit; }
     </div>
     <div class="gallery-tile" data-category="kitchen">
       <img src="foto20.jpg" alt="Casa al Mare La Ciacca — photo 20">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto21.jpg" alt="Castelsardo at sunset" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto22.jpg" alt="Aerial view of La Ciacca with the house marked" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto23.jpg" alt="Kitesurfing at the Coghinas river mouth, Valledoria" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto24.jpg" alt="Neptune's Grotto cave" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto25.jpg" alt="Wooden path down to a sandy beach" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="exterior">
+      <img src="foto27.jpg" alt="Coghinas river mouth and the beach of Valledoria" loading="lazy">
+      <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+    </div>
+    <div class="gallery-tile" data-category="bedroom1">
+      <img src="foto28.jpg" alt="Bathroom" loading="lazy">
       <span class="zoom-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
     </div>
   </div>
@@ -710,6 +738,7 @@ button{ font-family:inherit; }
         <div class="field"><label data-i18n="field_phone">Phone (optional)</label><input type="tel" id="guestPhone"></div>
         <div class="field"><label data-i18n="field_guests">Number of guests</label><input type="number" id="guestCount" min="1" max="12" value="2" required></div>
         <div class="field full"><label data-i18n="field_message">Message (optional)</label><textarea id="guestMessage" data-i18n-placeholder="field_message_ph" placeholder="Anything we should know — arrival time, special requests…"></textarea></div>
+        <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website<input type="text" id="guestWebsite" tabindex="-1" autocomplete="off"></label></div>
       </div>
       <div class="submit-row">
         <button type="submit" class="submit-btn" id="submitBtn" data-i18n="submit_btn">Send booking request</button>
@@ -735,17 +764,23 @@ button{ font-family:inherit; }
 
 <script>
 /* =========================================================
-   CONFIGURATION — fill these in after creating your Supabase
-   project (see the setup guide that came with this file).
+   CONFIGURATION
+   Booking runs on a free Google Sheet + Google Apps Script.
+   Paste the Web App URL (ends with /exec) from the setup in
+   rezervacie-apps-script.gs.
    ========================================================= */
-const SUPABASE_URL = 'https://aagkqehkcymqnbxwdycq.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhZ2txZWhrY3ltcW5ieHdkeWNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAyMjE0ODEsImV4cCI6MjEwNTc5NzQ4MX0.HqI60WE-5A8HTcHZ4r7fubk31V1J-RZX1U0smejoxvo';
+const BOOKING_API_URL = 'https://script.google.com/macros/s/AKfycbw6Lc_bVxQKkK8Uil3ZM0p4-2eZpFFOSGLAftfKn4CGqFWT2xmjRjKMUS9QZkO0Hn9k/exec';   // e.g. 'https://script.google.com/macros/s/XXXX/exec'
+
+/* Minimum stay in nights (keep the same as MIN_NIGHTS in the Apps Script). */
+const MIN_NIGHTS = 5;
 
 /* Optional: set a number to show an estimated total on the
    selection bar (e.g. 120). Leave as null to hide pricing. */
 const PRICE_PER_NIGHT = null;
 
-const CONFIGURED = !SUPABASE_URL.includes('YOUR-PROJECT') && !SUPABASE_ANON_KEY.includes('YOUR-ANON');
+const CONTACT_EMAIL = 'dkrajcirova.oil@gmail.com';
+
+const CONFIGURED = /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(BOOKING_API_URL);
 
 /* =========================================================
    TRANSLATIONS (English / Slovak) + language switcher
@@ -802,7 +837,10 @@ const I18N = {
     night: 'night', nights: 'nights',
     msg_avail_error: 'Could not load current availability. Please refresh the page.',
     msg_range_conflict: 'Those dates include a night that is already booked — please choose a different range.',
-    msg_not_configured: 'Booking is not connected yet — see the setup guide to link Supabase.',
+    msg_not_configured: 'Online booking is not available right now — please send us your request by email:',
+    msg_min_nights: 'The minimum stay is {n} nights — please choose a later check-out date.',
+    min_stay_hint: 'min. {n} nights',
+    email_us: 'Email us your request',
     msg_success: 'Request sent! Your dates are now reserved as pending — you will hear back by email shortly to confirm.',
     msg_conflict: 'Sorry — someone just booked overlapping dates. Please choose a different range.',
     msg_generic_error: 'Something went wrong sending your request. Please try again, or email us directly.',
@@ -860,7 +898,10 @@ const I18N = {
     night: 'noc', nights: 'noci',
     msg_avail_error: 'Nepodarilo sa načítať aktuálnu dostupnosť. Skús prosím obnoviť stránku.',
     msg_range_conflict: 'Vybraný rozsah obsahuje už obsadenú noc — vyber prosím iný termín.',
-    msg_not_configured: 'Rezervácie ešte nie sú pripojené — pozri návod na prepojenie so Supabase.',
+    msg_not_configured: 'Online rezervácia momentálne nefunguje — pošli nám prosím žiadosť e-mailom:',
+    msg_min_nights: 'Minimálny pobyt je {n} nocí — vyber prosím neskorší dátum odchodu.',
+    min_stay_hint: 'min. {n} nocí',
+    email_us: 'Poslať žiadosť e-mailom',
     msg_success: 'Žiadosť odoslaná! Tvoj termín je teraz rezervovaný ako čakajúci — čoskoro sa ti ozveme e-mailom s potvrdením.',
     msg_conflict: 'Prepáč — niekto si práve rezervoval prekrývajúci sa termín. Vyber prosím iný rozsah.',
     msg_generic_error: 'Pri odosielaní žiadosti nastala chyba. Skús to prosím znova, alebo nám napíš priamo e-mailom.',
@@ -928,15 +969,15 @@ function rangeHasBooked(start, end){
   return false;
 }
 
-/* ============ SUPABASE ============ */
+/* ============ BOOKING API (Google Sheets + Apps Script) ============ */
 async function fetchAvailability(){
   if (!CONFIGURED) return;
   try{
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/public_availability?select=check_in,check_out,status`, {
-      headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` }
-    });
+    const res = await fetch(BOOKING_API_URL + '?t=' + Date.now());
     if (!res.ok) throw new Error('Could not load availability (' + res.status + ')');
-    availability = await res.json();
+    const data = await res.json();
+    if (!data.ok) throw new Error('Availability error');
+    availability = data.ranges || [];
   }catch(e){
     console.error(e);
     showFormMessage(T('msg_avail_error'), 'error');
@@ -944,25 +985,37 @@ async function fetchAvailability(){
 }
 
 async function submitBooking(payload){
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/bookings`, {
+  // Sent as text/plain so the browser makes a "simple" request (no CORS preflight).
+  const res = await fetch(BOOKING_API_URL, {
     method: 'POST',
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      Prefer: 'return=minimal'
-    },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(payload)
   });
-  if (!res.ok){
-    let body = null;
-    try{ body = await res.json(); }catch(e){}
-    const isConflict = res.status === 409 || (body && body.code === '23P01');
-    const err = new Error(isConflict ? 'conflict' : ((body && body.message) || 'request failed'));
-    err.isConflict = isConflict;
+  let body = null;
+  try{ body = await res.json(); }catch(e){}
+  if (!res.ok || !body || !body.ok){
+    const code = body && body.error;
+    const err = new Error(code || 'request failed');
+    err.isConflict = code === 'conflict';
+    err.isMinNights = code === 'min_nights';
     throw err;
   }
   return null;
+}
+
+function mailtoLink(){
+  const lines = [];
+  if (selStart && selEnd){
+    const nights = Math.round((selEnd - selStart) / 86400000);
+    lines.push(`${fmtLong(selStart)} → ${fmtLong(selEnd)} (${nights} ${nightsWord(nights)})`);
+  }
+  const v = id => (document.getElementById(id) || {}).value || '';
+  if (v('guestName')) lines.push(v('guestName'));
+  if (v('guestPhone')) lines.push(v('guestPhone'));
+  if (v('guestCount')) lines.push((LANG === 'sk' ? 'Počet hostí: ' : 'Guests: ') + v('guestCount'));
+  if (v('guestMessage')) lines.push('', v('guestMessage'));
+  const subject = (LANG === 'sk' ? 'Žiadosť o rezerváciu – ' : 'Booking request – ') + 'Casa al Mare La Ciacca';
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
 }
 
 /* ============ CALENDAR RENDER ============ */
@@ -1027,7 +1080,10 @@ function onDayClick(date){
     } else if (rangeHasBooked(selStart, date)){
       showFormMessage(T('msg_range_conflict'), 'error');
       selStart = date; selEnd = null;
+    } else if (Math.round((date - selStart) / 86400000) < MIN_NIGHTS){
+      showFormMessage(T('msg_min_nights').replace('{n}', MIN_NIGHTS), 'error');
     } else {
+      hideFormMessage();
       selEnd = date;
     }
   }
@@ -1041,7 +1097,7 @@ function renderSelectionBar(){
   if (!selStart){ bar.style.display = 'none'; return; }
   bar.style.display = 'flex';
   if (!selEnd){
-    text.innerHTML = `<b>${fmtLong(selStart)}</b> <span class="muted">${T('pick_checkout')}</span>`;
+    text.innerHTML = `<b>${fmtLong(selStart)}</b> <span class="muted">${T('pick_checkout')} (${T('min_stay_hint').replace('{n}', MIN_NIGHTS)})</span>`;
   } else {
     const nights = Math.round((selEnd - selStart) / 86400000);
     let priceLine = '';
@@ -1066,9 +1122,17 @@ document.getElementById('calPrev').addEventListener('click', () => { viewMonth =
 document.getElementById('calNext').addEventListener('click', () => { viewMonth = addMonths(viewMonth, 1); renderCalendar(); });
 
 /* ============ FORM MESSAGES ============ */
-function showFormMessage(msg, type){
+function showFormMessage(msg, type, withEmailLink){
   const el = document.getElementById('formMessage');
   el.textContent = msg;
+  if (withEmailLink){
+    const a = document.createElement('a');
+    a.href = mailtoLink();
+    a.textContent = T('email_us') + ' → ' + CONTACT_EMAIL;
+    a.style.cssText = 'display:inline-block;margin-left:6px;font-weight:600;text-decoration:underline;text-underline-offset:2px;color:inherit';
+    el.appendChild(document.createTextNode(' '));
+    el.appendChild(a);
+  }
   el.className = 'form-message show ' + type;
 }
 function hideFormMessage(){
@@ -1081,11 +1145,11 @@ document.getElementById('bookingForm').addEventListener('submit', async (ev) => 
   ev.preventDefault();
   hideFormMessage();
 
+  if (!selStart || !selEnd) return;
   if (!CONFIGURED){
-    showFormMessage(T('msg_not_configured'), 'error');
+    showFormMessage(T('msg_not_configured'), 'error', true);
     return;
   }
-  if (!selStart || !selEnd) return;
 
   const submitBtn = document.getElementById('submitBtn');
   submitBtn.disabled = true;
@@ -1099,7 +1163,8 @@ document.getElementById('bookingForm').addEventListener('submit', async (ev) => 
     phone: document.getElementById('guestPhone').value.trim() || null,
     guests_count: parseInt(document.getElementById('guestCount').value, 10) || 1,
     message: document.getElementById('guestMessage').value.trim() || null,
-    status: 'pending'
+    website: document.getElementById('guestWebsite').value,
+    lang: LANG
   };
 
   try{
@@ -1118,8 +1183,10 @@ document.getElementById('bookingForm').addEventListener('submit', async (ev) => 
       selStart = null; selEnd = null;
       renderCalendar();
       document.getElementById('bookingForm').classList.remove('open');
+    } else if (e.isMinNights){
+      showFormMessage(T('msg_min_nights').replace('{n}', MIN_NIGHTS), 'error');
     } else {
-      showFormMessage(T('msg_generic_error'), 'error');
+      showFormMessage(T('msg_generic_error'), 'error', true);
     }
   }finally{
     submitBtn.disabled = false;
@@ -1196,7 +1263,6 @@ galleryTabs.forEach(tab => {
     applyGalleryFilter(tab.getAttribute('data-cat'));
   });
 });
-applyGalleryFilter('exterior');
 
 /* ---- Gallery lightbox (cycles only through the currently visible photos) ---- */
 let galleryImages = [];
@@ -1213,7 +1279,7 @@ function refreshGalleryImages(){
   });
   visibleTiles.forEach((t, i) => t.setAttribute('data-index', i));
 }
-refreshGalleryImages();
+applyGalleryFilter('exterior'); // must run after galleryImages is declared
 
 function openLightbox(i){
   lbIndex = i;
